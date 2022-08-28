@@ -1,0 +1,36 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img-nav{
+    width: 8.5em;
+}
+
+.ul-nav{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.ul-nav li{
+    padding: 5%;
+}
+
+.ul-nav a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.ul-nav a:visited{
+    text-decoration: none;
+    color: black;
+}
