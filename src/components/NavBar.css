@@ -23,6 +23,7 @@
 
 .ul-nav li{
     padding: 5%;
+    font-weight: 600;
 }
 
 .ul-nav a:hover{

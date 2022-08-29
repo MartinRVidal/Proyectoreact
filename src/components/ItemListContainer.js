@@ -1,11 +1,11 @@
 import React from 'react'
-import b10 from '../images/b10.jpg'
+import banner from '../images/banner.png'
 import "../components/ItemListContainer.css"
 
 const ItemListContainer = () => {
 return (
     <div className='div-banner'>
-        <img src={b10} alt="" className='img-banner'/>
+        <img src={banner} alt="" className='img-banner'/>
     </div>
 )
 }
