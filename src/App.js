@@ -5,8 +5,8 @@ import "./App.css"
 function App() {
   return (
     <header>
-      <NavBar/>
-      <ItemListContainer/>
+      <NavBar />
+      <ItemListContainer />
     </header>
   )
 }
