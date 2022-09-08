@@ -1,12 +1,12 @@
 import NavBar from "../src/components/navbar"
-import ItemListContainer from "../src/components/ItemListContainer"
 import "./App.css"
+import ItemDetailContainer from "./components/ItemDetailContainer"
 
 function App() {
   return (
     <header>
       <NavBar />
-      <ItemListContainer />
+      <ItemDetailContainer />
     </header>
   )
 }
