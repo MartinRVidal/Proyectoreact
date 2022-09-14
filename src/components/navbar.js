@@ -3,6 +3,7 @@ import logop from '../images/logop.jpg';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCartShopping} from '@fortawesome/free-solid-svg-icons';
 import "../components/NavBar.css";
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
 return (
@@ -10,16 +11,19 @@ return (
         <img src={logop} alt="" className='img-nav'/>
         <ul className='ul-nav'>
             <li>
-                <a href="#">Inicio</a>
+                <NavLink to="/" >Inicio</NavLink>
             </li>
             <li>
-                <a href="#">Tienda</a>
+                <NavLink to="/categoria/remeras">Remeras</NavLink>
             </li>
             <li>
-                <a href="#">Contacto</a>
+                <NavLink to="/categoria/zapatillas">Zapatillas</NavLink>
             </li>
             <li>
-                <a href='#'><FontAwesomeIcon icon={faCartShopping}/></a>
+                <NavLink to="/contacto">Contacto</NavLink>
+            </li>
+            <li>
+                <NavLink to="/cart"><FontAwesomeIcon icon={faCartShopping}/></NavLink>
             </li>
         </ul>
     </div>
