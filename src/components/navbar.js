@@ -5,6 +5,8 @@ import { NavLink } from 'react-router-dom';
 import banner from '../images/banner.png';
 import CartWidget from "./CartWidget";
 const NavBar = () => {
+
+    
     return (
         <>
             <div className='nav-bar'>
