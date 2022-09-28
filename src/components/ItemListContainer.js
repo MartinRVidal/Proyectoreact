@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "../components/ItemListContainer.css";
+import "./Components.css";
 import ItemList from "../components/ItemList";
 import { useParams } from 'react-router-dom';
 import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
@@ -8,7 +8,7 @@ import { getFirestore, collection, getDocs, query, where } from 'firebase/firest
 export const ItemListContainer = () => {
     const [data, setData] = useState([]);
 
-    const {categoriaId} = useParams();
+    const { categoriaId } = useParams();
 
     useEffect(() => {
         const querydb = getFirestore();
@@ -16,24 +16,24 @@ export const ItemListContainer = () => {
         if (categoriaId) {
             const queryFilter = query(queryCollection, where("category", "==", categoriaId))
             getDocs(queryFilter)
-                .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data()}))));
-                console.log(queryFilter);
+                .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data() }))));
+            console.log(queryFilter);
         } else {
             getDocs(queryCollection)
-            .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data()}))));
+                .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data() }))));
         }
-        }, [categoriaId])
+    }, [categoriaId])
 
 
 
 
-        return (
-            <>
+    return (
+        <>
             <div className='items'>
                 <ItemList data={data} />
             </div>
-            </>
-        )
-    }
+        </>
+    )
+}
 
-    export default ItemListContainer;
+export default ItemListContainer;

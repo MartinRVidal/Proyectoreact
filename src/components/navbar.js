@@ -1,12 +1,12 @@
 import React from 'react';
 import logop from '../images/logop.jpg';
-import "../components/NavBar.css";
+import "./Components.css";
 import { NavLink } from 'react-router-dom';
 import banner from '../images/banner.png';
 import CartWidget from "./CartWidget";
 const NavBar = () => {
 
-    
+
     return (
         <>
             <div className='nav-bar'>
@@ -25,7 +25,7 @@ const NavBar = () => {
                         <NavLink to="/contacto">Contacto</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/cart"><CartWidget/></NavLink>
+                        <NavLink to="/cart" className='cart'><CartWidget /></NavLink>
                     </li>
                 </ul>
             </div>
